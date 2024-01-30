@@ -39,6 +39,11 @@ public class FakerData {
         return phone.phoneNumber().phoneNumber();
     }
 
+    public static String invalidPhone() {
+        var phone = new Faker(new Locale("ru"));
+        return phone.numerify("#");
+    }
+
     public static class Registration {
         private Registration() {
         }
